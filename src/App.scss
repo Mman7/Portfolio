@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Sora", sans-serif;
 }
 .App {
   width: 100vw;
@@ -10,6 +12,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  .icon {
+    font-size: 5rem;
+    position: fixed;
+    color: white;
+    top: 0;
+    height: 100vh;
+    opacity: 0.6;
+  }
+  .arrow-right-icon {
+    right: clamp(-25px, calc(-25px + 1vw), 5px);
+  }
+
+  .arrow-left-icon {
+    left: -25px;
+  }
 }
 .background-text {
   position: fixed;
@@ -27,39 +44,72 @@
   }
   .flutter-text,
   .react-text {
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
     color: #8d8d8d;
     font-size: calc(3.5rem + 10vw);
   }
 }
+.home-page,
+.project,
+.contact {
+  z-index: 6;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 .home-page {
   width: 80%;
+  max-width: 900px;
   z-index: 5;
   border-radius: 50px;
-  background: rgba(220, 223, 228, 0.8);
-  padding: 2em 3em;
+  background: #dcdfe4cc;
+  padding: 1.8em;
   display: flex;
   flex-direction: column-reverse;
   .self-introduce {
     display: flex;
     flex-direction: column;
     h1 {
-      font-size: 1.5rem;
+      margin-bottom: 0.25em;
+      font-size: clamp(1rem, calc(1.1rem + 1vw), 2rem);
       color: darken(#435166, 10);
+      font-weight: 700;
+    }
+    span {
+      font-weight: bold;
     }
     p {
-      font-size: 1rem;
+      font-weight: 500;
+      font-size: clamp(1rem, calc(0.8rem + 1vw), 1rem);
       margin-bottom: 1rem;
+      opacity: 0.75;
     }
-    button {
+    .contact-btn {
+      font-weight: bold;
       font-size: 1rem;
-      padding: 1em 1.5em;
       border-radius: 10px;
       outline: none;
       border: none;
       margin-top: auto;
-      margin-bottom: 1.5em;
-      &:hover {
-        background: #435166;
+      padding: 0;
+      overflow: hidden;
+      .contact-btn-link {
+        width: 100%;
+        margin: 0;
+        text-decoration: none;
+        color: white;
+        padding: 0.5em 1em;
+        transition: all 0.35s;
       }
     }
   }
@@ -82,7 +132,17 @@
     }
   }
 }
-@media screen and (min-width: 750px) {
+.project {
+  background: red;
+  width: 400px;
+  height: 300px;
+}
+.contact {
+  background: blue;
+  width: 400px;
+  height: 300px;
+}
+@media screen and (min-width: 700px) {
   * {
     .home-page {
       flex-direction: row;
