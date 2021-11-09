@@ -1,9 +1,6 @@
-##Tool
-#task manager
-Vite
+## Tools and library
+- Material Ui
+- React router
 
-#Ui library
-Material Ui
-
-#Others Libraries
-react-router
+## Task manager
+- rollup(Vite)
