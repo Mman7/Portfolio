@@ -25,7 +25,7 @@ export default function Contact() {
         <h1 className="title">Contact me</h1>
         <a
           className="linkedin-btn"
-          href="https://www.linkedin.com/in/mackenzy-man-2aa13b159?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhHsVPUD9TR688On7Hlte8w%3D%3D"
+          href="https://www.linkedin.com/in/mack-man-2aa13b159/"
           target="_blank"
         >
           <img src={LinkedInIcon} alt="linkedin icon" />
