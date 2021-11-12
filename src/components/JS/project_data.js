@@ -1,9 +1,9 @@
-import calculator from "../assets/Project_img/calculater-app.webp";
-import todolist from "../assets/Project_img/todo-list.webp";
-import weatherapp from "../assets/Project_img/Weather-app.webp";
-import practice1 from "../assets/Project_img/interactive-pricing-component.webp";
-import practice2 from "../assets/Project_img/pricing-component-with-toggle-by-mackenzie.webp";
-import practice3 from "../assets/Project_img/fylo-data-storage-component-by-mackenzie.webp";
+import calculator from "../../assets/Project_img/calculater-app.webp";
+import todolist from "../../assets/Project_img/todo-list.webp";
+import weatherapp from "../../assets/Project_img/Weather-app.webp";
+import practice1 from "../../assets/Project_img/interactive-pricing-component.webp";
+import practice2 from "../../assets/Project_img/pricing-component-with-toggle-by-mackenzie.webp";
+import practice3 from "../../assets/Project_img/fylo-data-storage-component-by-mackenzie.webp";
 
 export const project_data = [
   {
