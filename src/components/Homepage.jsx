@@ -3,7 +3,6 @@ import avatar from "../assets/avatar.webp";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { Icon } from "@material-ui/core";
-import SvgIcon from "@mui/material/SvgIcon";
 import FlutterIcon from "../assets/Icons/flutter-logo.svg";
 import ReactIcon from "../assets/Icons/react-1.svg";
 import FigmaIcon from "../assets/Icons/figma-1.svg";
