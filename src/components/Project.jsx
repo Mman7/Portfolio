@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { project_data } from "./project_data";
+import { project_data } from "./JS/project_data";
 
 export default function Project() {
   return (
