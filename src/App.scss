@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;700&display=swap");
+$backgroundColor: lighten(#dcdfe4cc, 100);
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +20,11 @@
     top: 0;
     height: 100vh;
     opacity: 0.6;
+    z-index: 8;
   }
   .arrow-right-icon {
-    right: clamp(-25px, calc(-25px + 1vw), 5px);
+    // right: clamp(-25px, calc(-25px + 1vw), 5px);
+    right: -25px;
   }
 
   .arrow-left-icon {
@@ -54,6 +57,8 @@
 .home-page,
 .project,
 .contact {
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 6;
   animation: fadeIn 0.3s ease;
 }
@@ -71,14 +76,23 @@
   width: 80%;
   max-width: 900px;
   z-index: 5;
-  border-radius: 50px;
-  background: #dcdfe4cc;
+  border-radius: 25px;
+  background: $backgroundColor;
   padding: 1.8em;
   display: flex;
   flex-direction: column-reverse;
   .self-introduce {
     display: flex;
     flex-direction: column;
+    .skill-icons {
+      margin: auto 0 auto 0;
+      .skill-icon {
+        margin: 0.25em;
+        opacity: 1;
+        width: 30px;
+        height: 30px;
+      }
+    }
     h1 {
       margin-bottom: 0.25em;
       font-size: clamp(1rem, calc(1.1rem + 1vw), 2rem);
@@ -100,9 +114,9 @@
       border-radius: 10px;
       outline: none;
       border: none;
-      margin-top: auto;
-      padding: 0;
+      padding: 0.5em;
       overflow: hidden;
+      margin-top: auto;
       .contact-btn-link {
         width: 100%;
         margin: 0;
@@ -118,8 +132,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    img {
+    margin: auto;
+    width: 50%;
+    .avatar {
       width: 100%;
       max-width: 300px;
       min-width: 150px;
@@ -133,9 +148,39 @@
   }
 }
 .project {
-  background: red;
-  width: 400px;
-  height: 300px;
+  min-width: 290px;
+  border-radius: 25px;
+  .title {
+    display: flex;
+    justify-content: center;
+    margin: 0.25em;
+    font-size: calc(1.25rem + 1vw);
+  }
+  position: relative;
+  background: $backgroundColor;
+  max-width: 80%;
+  background: #21395c;
+  color: white;
+  .swiper-container {
+    max-width: 700px;
+    .swipe-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+      h1 {
+        line-height: 0.25;
+        margin-top: 0.25em;
+        padding: 0.5em;
+        font-size: calc(0.75rem + 1vw);
+      }
+    }
+  }
 }
 .contact {
   background: blue;
@@ -146,6 +191,11 @@
   * {
     .home-page {
       flex-direction: row;
+      justify-content: space-between;
+      .self-introduce {
+        width: 70%;
+        margin-right: 2em;
+      }
     }
     .image-wrapper {
       margin-left: 1.75rem;
