@@ -8,7 +8,12 @@ export default function Project() {
   return (
     <div className="project">
       <h1 className="title">Project</h1>
-      <Swiper className="swiper-container" spaceBetween={50} slidesPerView={1}>
+      <Swiper
+        className="swiper-container"
+        spaceBetween={50}
+        slidesPerView={1}
+        mousewheel={true}
+      >
         {project_data.map((prj) => (
           <SwiperSlide className="swipe-item" key={prj.id}>
             <a href={prj.LinkTopProject} target="_blank">
