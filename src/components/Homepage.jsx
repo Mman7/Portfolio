@@ -6,6 +6,8 @@ import { Icon } from "@material-ui/core";
 import FlutterIcon from "../assets/Icons/flutter-logo.svg";
 import ReactIcon from "../assets/Icons/react-1.svg";
 import FigmaIcon from "../assets/Icons/figma-1.svg";
+import SassIcon from "../assets/Icons/sass-1.svg";
+import MUIIcon from "../assets/Icons/material-ui-1.svg";
 
 export default function Homepage() {
   return (
@@ -21,6 +23,8 @@ export default function Homepage() {
             <img className="skill-icon" src={FlutterIcon} alt="flutter-icon" />
             <img className="skill-icon" src={ReactIcon} alt="react-icon" />
             <img className="skill-icon" src={FigmaIcon} alt="figma-icon" />
+            <img className="skill-icon" src={SassIcon} alt="Sass-icon" />
+            <img className="skill-icon" src={MUIIcon} alt="MaterialUI-icon" />
           </Icon>
         </div>
         <Button className="contact-btn" variant="contained">
