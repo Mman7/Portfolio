@@ -38,7 +38,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
-      {location.pathname !== "contact" && (
+      {location.pathname !== "/contact" && (
         <Link to={{ pathname: nextPage() }}>
           <KeyboardArrowRightSharpIcon className="arrow-right-icon icon"></KeyboardArrowRightSharpIcon>
         </Link>
