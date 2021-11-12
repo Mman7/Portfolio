@@ -22,6 +22,18 @@ $backgroundColor: lighten(#dcdfe4cc, 100);
     opacity: 0.6;
     z-index: 8;
   }
+  .loading-card {
+    position: absolute;
+    z-index: 40;
+    overflow: hidden;
+    height: 60%;
+    width: 80%;
+    border-radius: 25px;
+    .container {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .arrow-right-icon {
     // right: clamp(-25px, calc(-25px + 1vw), 5px);
     right: -25px;
@@ -89,8 +101,8 @@ $backgroundColor: lighten(#dcdfe4cc, 100);
       .skill-icon {
         margin: 0.25em;
         opacity: 1;
-        width: 30px;
-        height: 30px;
+        width: 45px;
+        height: 45px;
       }
     }
     h1 {

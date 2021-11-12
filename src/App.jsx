@@ -7,6 +7,8 @@ const Project = React.lazy(() => import("./components/Project"));
 const Contact = React.lazy(() => import("./components/Contact"));
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 
+import LoadingCard from "./components/LoadingCard";
+
 import KeyboardArrowRightSharpIcon from "@mui/icons-material/KeyboardArrowRightSharp";
 import KeyboardArrowLeftSharpIcon from "@mui/icons-material/KeyboardArrowLeft";
 
@@ -29,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <BackgroundText />
-      <Suspense fallback={<div>...</div>}>
+      <Suspense fallback={<LoadingCard />}>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route path="/project" element={<Project />} />
