@@ -7,6 +7,7 @@ $backgroundColor: lighten(#dcdfe4de, 100);
   font-family: "Sora", sans-serif;
 }
 .App {
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   background: #435166;
@@ -35,7 +36,6 @@ $backgroundColor: lighten(#dcdfe4de, 100);
     }
   }
   .arrow-right-icon {
-    // right: clamp(-25px, calc(-25px + 1vw), 5px);
     right: -25px;
   }
 
