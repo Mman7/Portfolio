@@ -3,11 +3,7 @@ import avatar from "../assets/avatar.webp";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { Icon } from "@material-ui/core";
-import FlutterIcon from "../assets/Icons/flutter-logo.svg";
-import ReactIcon from "../assets/Icons/react-1.svg";
-import FigmaIcon from "../assets/Icons/figma-1.svg";
-import SassIcon from "../assets/Icons/sass-1.svg";
-import MUIIcon from "../assets/Icons/material-ui-1.svg";
+import { icon_data } from "./JS/icon_data";
 
 export default function Homepage() {
   return (
@@ -20,11 +16,15 @@ export default function Homepage() {
         </p>
         <div className="skill-icons">
           <Icon>
-            <img className="skill-icon" src={FlutterIcon} alt="flutter-icon" />
-            <img className="skill-icon" src={ReactIcon} alt="react-icon" />
-            <img className="skill-icon" src={FigmaIcon} alt="figma-icon" />
-            <img className="skill-icon" src={SassIcon} alt="Sass-icon" />
-            <img className="skill-icon" src={MUIIcon} alt="MaterialUI-icon" />
+            {icon_data.map((icon) => (
+              <img
+                className="skill-icon"
+                src={icon.icon_src}
+                alt={icon.alt}
+                title={icon.title}
+                key={icon.title}
+              />
+            ))}
           </Icon>
         </div>
         <Button className="contact-btn" variant="contained">
